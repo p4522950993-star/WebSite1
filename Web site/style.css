@@ -9,7 +9,6 @@ body {
     scroll-behavior: smooth;
 }
 
-/* 🔹 Navbar */
 nav {
     display: flex;
     justify-content: space-between;
@@ -41,13 +40,11 @@ nav a:hover {
     color: #ffe600;
 }
 
-/* 🔹 Sections */
 section {
     padding: 80px 20px;
     text-align: center;
 }
 
-/* 🔹 Hero Section */
 #home {
     height: 90vh;
     background: linear-gradient(135deg, #00c6ff, #007BFF);
@@ -70,7 +67,6 @@ section {
     margin: 10px 0;
 }
 
-/* 🔹 Button */
 button {
     margin-top: 20px;
     padding: 12px 25px;
@@ -88,40 +84,15 @@ button:hover {
     transform: scale(1.1);
 }
 
-/* 🔹 About */
 #about {
     background: #f9f9f9;
 }
 
-/* 🔹 Skills */
-#skills ul {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-    cursor: pointer;
-}
-
-#skills li {
-    background: #007BFF;
-    color: white;
-    padding: 10px 20px;
-    border-radius: 20px;
-    transition: 0.3s;
-}
-
-#skills li:hover {
-    transform: translateY(-5px);
-    background: #00c6ff;
-}
-
-/* 🔹 Contact */
 #contact {
     background: #333;
     color: white;
 }
 
-/* 🔹 Animation */
 @keyframes fadeIn {
     from {
         opacity: 0;
