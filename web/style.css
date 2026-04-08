@@ -4,6 +4,10 @@
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
+.hero h1 {
+  font-size: 40px;
+  color: yellow;
+}
 
 body {
   background: linear-gradient(135deg, #00ff9d, #00c6ff);
