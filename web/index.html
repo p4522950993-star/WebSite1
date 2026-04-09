@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Portfolio</title>
+  <title>Interactive Portfolio</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,67 +12,71 @@
 <nav>
   <h2>MyPortfolio</h2>
   <ul>
-    <li><a href="#">Home</a></li>
+    <li><a href="#home">Home</a></li>
     <li><a href="#projects">Projects</a></li>
     <li><a href="#skills">Skills</a></li>
+    <li><a href="#contect">Contect</a></li>
   </ul>
 </nav>
 
-<!-- Hero Section -->
-<section class="hero">
+<!-- Hero -->
+<section id="home" class="hero">
   <h1>Hi, I'm Priyansh 👋</h1>
-  <p>Frontend Developer | Student</p>
-  <button>View My Work</button>
+  <p>Frontend Developer</p>
+  <button onclick="scrollToProjects()">View Work</button>
 </section>
 
 <!-- Projects -->
-<section id="projects" class="projects-section">
+<section id="projects">
   <h2>My Projects</h2>
 
   <div class="projects">
-
     <div class="card">
-      <h3>Portfolio Website</h3>
-      <p>Modern portfolio using HTML & CSS.</p>
+      <h3>Portfolio</h3>
+      <p>Personal portfolio website</p>
       <button>View</button>
     </div>
 
     <div class="card">
-      <h3>Registration Form</h3>
-      <p>Responsive form with validation.</p>
+      <h3>Form</h3>
+      <p>Registration form UI</p>
       <button>View</button>
     </div>
 
     <div class="card">
       <h3>Landing Page</h3>
-      <p>Startup landing page design.</p>
+      <p>Startup landing page</p>
       <button>View</button>
     </div>
-
   </div>
 </section>
 
 <!-- Skills -->
-<section id="skills" class="skills-section">
+<section id="skills">
   <h2>My Skills</h2>
-
   <div class="skills">
     <span>HTML</span>
     <span>CSS</span>
     <span>JavaScript</span>
-    <span>Responsive Design</span>
-    <span>GitHub</span>
+    <span>Responsive</span>
   </div>
 </section>
 
-<!-- Contact Section -->
-<section id="contact" class="contact">
-  <h2>Contact Me</h2>
-  <input type="text" placeholder="Your Name">
-  <input type="email" placeholder="Your Email">
-  <textarea rows="4" placeholder="Your Message"></textarea>
-  <button>Send Message</button>
-</section>
+<!-- 🔹 Contact Section -->
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <p>Email: p4522950993@gmail.com</p>
+        <p>Phone: +91 9274322696</p>
+    </section>
+
+<!-- JavaScript -->
+<script>
+function scrollToProjects() {
+  document.getElementById("projects").scrollIntoView({
+    behavior: "smooth"
+  });
+}
+</script>
 
 </body>
 </html>
