@@ -1,60 +1,255 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Premium Portfolio</title>
 
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="style.css">
+<style>
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animated Background */
+body {
+  background: linear-gradient(270deg, #00ff9d, #00c6ff, #0072ff);
+  background-size: 600% 600%;
+  animation: bgMove 10s ease infinite;
+}
+
+@keyframes bgMove {
+  0% { background-position: 0% }
+  50% { background-position: 100% }
+  100% { background-position: 0% }
+}
+
+/* Navbar */
+nav {
+  display: flex;
+  justify-content: space-between;
+  padding: 15px 40px;
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  position: sticky;
+  top: 0;
+}
+
+nav a {
+  color: white;
+  margin-left: 20px;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: yellow;
+}
+
+/* Hero */
+.hero {
+  text-align: center;
+  padding: 100px 20px;
+  color: white;
+}
+
+.hero h1 {
+  color: yellow;
+  font-size: 42px;
+}
+
+.hero button {
+  margin-top: 20px;
+  padding: 10px 25px;
+  border: none;
+  background: #00ff9d;
+  border-radius: 8px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.hero button:hover {
+  background: #00c6ff;
+  transform: scale(1.05);
+}
+
+/* Sections */
+h2 {
+  text-align: center;
+  margin: 40px 0;
+  color: white;
+}
+
+/* Projects */
+.projects {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255,255,255,0.2);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  width: 260px;
+  border-radius: 15px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-12px) scale(1.03);
+}
+
+.card button {
+  margin-top: 10px;
+  padding: 8px 15px;
+  border: none;
+  background: #0072ff;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Skills */
+.skills {
+  text-align: center;
+}
+
+.skills span {
+  display: inline-block;
+  background: rgba(255,255,255,0.3);
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+
+.skills span:hover {
+  background: #00ff9d;
+  transform: scale(1.1);
+}
+
+/* Ripple */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.6);
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+}
+
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+/* Glow */
+button:hover {
+  box-shadow: 0 0 10px #00ff9d, 0 0 20px #00c6ff;
+}
+</style>
+
 </head>
 <body>
 
-    <!-- 🔹 Navbar -->
-    <nav>
-        <h2>MyPortfolio</h2>
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+<!-- Navbar -->
+<nav>
+  <h2 style="color:white;">Priyansh</h2>
+  <div>
+    <a href="#home">Home</a>
+    <a href="#projects">Projects</a>
+    <a href="#skills">Skills</a>
+  </div>
+</nav>
 
-    <!-- 🔹 Hero Section -->
-    <section id="home">
-        <h1>Hi, I'm Priyansh 👋</h1>
-        <h3>Frontend Developer</h3>
-        <p>I build simple and beautiful websites.</p>
-        <button onclick="location.href='#contact'">Contact Me</button>
-    </section>
+<!-- Hero -->
+<section id="home" class="hero">
+  <h1>Hi, I'm Priyansh 👋</h1>
+  <p>Creative Frontend Developer</p>
+  <button>Explore Work</button>
+</section>
 
-    <!-- 🔹 About Section -->
-    <section id="about">
-        <h2>About Me</h2>
-        <p>
-            I am a passionate frontend developer currently learning web development.
-            I enjoy creating user-friendly websites and improving my skills every day.
-            I am focused on building modern and responsive designs.
-        </p>
-    </section>
+<!-- Projects -->
+<section id="projects">
+  <h2>My Projects</h2>
 
-    <!-- 🔹 Skills Section -->
-    <section id="skills">
-        <h2>My Skills</h2>
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-        </ul>
-    </section>
+  <div class="projects">
+    <div class="card">
+      <h3>Portfolio</h3>
+      <p>Modern portfolio design</p>
+      <button>View</button>
+    </div>
 
-    <!-- 🔹 Contact Section -->
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: priyansh@example.com</p>
-        <p>Phone: +91 9876543210</p>
-    </section>
+    <div class="card">
+      <h3>Form UI</h3>
+      <p>Advanced form design</p>
+      <button>View</button>
+    </div>
+
+    <div class="card">
+      <h3>Landing Page</h3>
+      <p>Startup landing UI</p>
+      <button>View</button>
+    </div>
+  </div>
+</section>
+
+<!-- Skills -->
+<section id="skills">
+  <h2>My Skills</h2>
+  <div class="skills">
+    <span>HTML</span>
+    <span>CSS</span>
+    <span>JavaScript</span>
+    <span>UI Design</span>
+  </div>
+</section>
+
+<!-- JavaScript -->
+<script>
+
+// Smooth Scroll + Ripple
+document.querySelectorAll('a, button').forEach(el => {
+  el.addEventListener('click', function(e) {
+
+    // Smooth Scroll
+    if (this.tagName === "A") {
+      e.preventDefault();
+      const target = document.querySelector(this.getAttribute('href'));
+      if (target) target.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // Ripple Effect
+    const circle = document.createElement("span");
+    circle.classList.add("ripple");
+
+    const rect = this.getBoundingClientRect();
+    const size = Math.max(rect.width, rect.height);
+
+    circle.style.width = circle.style.height = size + "px";
+    circle.style.left = e.clientX - rect.left - size/2 + "px";
+    circle.style.top = e.clientY - rect.top - size/2 + "px";
+
+    this.appendChild(circle);
+
+    setTimeout(() => circle.remove(), 600);
+  });
+});
+
+</script>
 
 </body>
 </html>
